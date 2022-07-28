@@ -1,18 +1,17 @@
-from setuptools import setup
+#!/usr/bin/env python
 
-with open('README.md', 'r') as fh:
-    long_description = fh.read()
+from setuptools import setup  # noqa
+
 
 setup(
-    name='python-memcached-py38fix',
-    version='0.0.1',
-    packages=['python-memcached-py38fix'],
-    url='https://github.com/knktc/python-memcached',
-    author='knktc',
-    author_email='me@knktc.com',
-    description='A fork of python-memcached, but fix python3.8 syntax warning',
-    long_description=long_description,
-    long_description_content_type="text/markdown",
+    name="python-memcached-py38fix",
+    version="0.0.2",
+    description="A fork of python-memcached, but fix python3.8 syntax warning",
+    long_description=open("README.md").read(),
+    author="knktc",
+    author_email="me@knktc.com",
+    url="https://github.com/knktc/python-memcached",
+    py_modules=["memcache"],
     install_requires=open('requirements.txt').read().split(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
