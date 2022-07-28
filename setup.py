@@ -1,22 +1,18 @@
-#!/usr/bin/env python
+from setuptools import setup
 
-from setuptools.depends import get_module_constant
-from setuptools import setup  # noqa
+with open('README.md', 'r') as fh:
+    long_description = fh.read()
 
-
-version = get_module_constant('memcache', '__version__')
 setup(
-    name="python-memcached",
-    version=version,
-    description="Pure python memcached client",
-    long_description=open("README.md").read(),
-    author="Evan Martin",
-    author_email="martine@danga.com",
-    maintainer="Sean Reifschneider",
-    maintainer_email="jafo@tummy.com",
-    url="https://github.com/linsomniac/python-memcached",
-    download_url="https://github.com/linsomniac/python-memcached/releases/download/{0}/python-memcached-{0}.tar.gz".format(version),
-    py_modules=["memcache"],
+    name='python-memcached-py38fix',
+    version='0.0.1',
+    packages=['python-memcached-py38fix'],
+    url='https://github.com/knktc/python-memcached',
+    author='knktc',
+    author_email='me@knktc.com',
+    description='A fork of python-memcached, but fix python3.8 syntax warning',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     install_requires=open('requirements.txt').read().split(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",

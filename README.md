@@ -1,7 +1,6 @@
-[![Build
-Status](https://travis-ci.org/linsomniac/python-memcached.svg)](https://travis-ci.org/linsomniac/python-memcached)
-
 ## Overview
+
+This project forks the origin python-memcached project, and fix the SyntaxWarning for python 3.8.
 
 This software is a 100% Python interface to the memcached memory cache
 daemon.  It is the client side software which allows storing values
